@@ -1,0 +1,725 @@
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("fonts/Roboto/Roboto-Black.ttf") format("truetype");
+  /* Puedes agregar formatos adicionales aquí si tienes diferentes versiones de la fuente. */
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  /* Puedes agregar formatos adicionales aquí si es necesario. */
+}
+
+body {
+  font-family: "Roboto-Light", sans-serif; /* Usar la fuente Roboto Black como predeterminada. */
+}
+
+.pink {
+  color: #ec2c7f;
+}
+
+.blue {
+  color: #4ea3df;
+}
+
+/* CABECERA */
+header {
+  width: 100%;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0px -11px 29px gray;
+}
+
+.HeaderLogo {
+  width: 4%;
+}
+
+.HeaderPages {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+}
+
+.HeaderPages li {
+  margin-inline: 40px;
+}
+
+.HeaderPages li a {
+  text-decoration: none;
+  color: black;
+}
+
+.HeaderPages li a:hover {
+  color: #4ea3df;
+  font-weight: bold;
+}
+
+.HeaderContainer button {
+  border: 1px solid #ec2c7f;
+  color: #ec2c7f;
+  border-radius: 20px;
+  padding: 10px;
+  background: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.active {
+  color: #ec2c7f !important;
+  font-family: "Roboto-Black", sans-serif;
+}
+
+.btnSesion:hover {
+  background-color: #ec2c7f;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 50px;
+}
+
+.footerContainer {
+  background-color: rgba(78, 163, 223, 0.5);
+}
+
+.menuFooterContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.footerPages {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+.footerPages li {
+  margin-inline: 30px;
+}
+
+.footerPages li a {
+  text-decoration: none;
+  color: black;
+}
+
+.footerPages li a:hover {
+  color: #ec2c7f;
+}
+
+.addressFooterContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.addressFooterContainer img {
+  width: 100px;
+}
+
+.socialFooterContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.socialFooterContainer div img {
+  width: 30px;
+  margin: 10px;
+  filter: hue-rotate(180deg);
+}
+
+/************** HOME ******************/
+.sliderHomerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.banneHomeContainer {
+  width: 40%;
+  padding: 20px;
+}
+
+.textHomeContainer {
+  width: 60%;
+  padding: 40px;
+  text-align: center;
+}
+
+.textHomeContainer h2 {
+  font-family: "Roboto-Black", sans-serif;
+  font-size: 45px;
+  margin: 0;
+}
+
+.textHomeContainer h3 {
+  font-family: "Roboto-Black", sans-serif;
+  font-size: 35px;
+  margin: 0;
+}
+
+.botonTest {
+  margin: 30px;
+  border: 1px solid #ec2c7f;
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 20px;
+  background-color: #ec2c7f;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.botonTest:hover {
+  background-color: transparent;
+  color: #ec2c7f;
+  border: 1px solid #ec2c7f;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/*** SECCION DE ICONOS CON TEXTO HOME ***/
+.iconsHomeContainer {
+  padding: 25px;
+  text-align: center;
+  background-color: rgba(78, 163, 223, 0.4);
+  border-top-left-radius: 400px;
+  border-top-right-radius: 400px;
+}
+
+.iconsHomeContainer h2 {
+  font-family: "Roboto-Black", sans-serif;
+  font-size: 50px;
+}
+
+.iconsContainer {
+  display: flex;
+}
+
+.itemIcon {
+  width: 25%;
+  padding: 30px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.itemIcon div {
+  display: flex;
+  justify-content: center;
+}
+
+.itemIcon div img {
+  width: 150px;
+}
+
+/*** SECCION DE NOTICIAS HOME ***/
+.newsHomeContainer {
+  background-color: rgba(236, 44, 127, 0.1);
+  border-bottom-left-radius: 400px;
+  border-bottom-right-radius: 400px;
+}
+
+.newsContainer {
+  display: flex;
+  padding: 50px;
+  align-items: center;
+}
+
+.newsContainer img {
+  width: 800px;
+  border-radius: 50px;
+}
+
+.contentNewsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.contentNewsContainer div h3 {
+  font-size: 40px;
+}
+
+.contentNewsContainer div p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contentNewsContainer div button {
+  font-size: 15px;
+  border: 1px solid #4ea3df;
+  border-radius: 30px;
+  background-color: #4ea3df;
+  color: white;
+  padding: 15px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.contentNewsContainer div button:hover {
+  border: 1px solid #4ea3df;
+  background-color: transparent;
+  color: #4ea3df;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/************** PREGUNTAS ******************/
+.questionsMainContainer {
+  display: flex;
+  padding: 40px;
+}
+
+.questionsMainContainer img {
+  width: 700px;
+}
+
+.questionsMainContainer div {
+  padding-right: 450px;
+}
+
+.questionsMainContainer div h3 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.questionsMainContainer div p {
+  font-size: 20px;
+}
+
+.questionsMainContainer div ul {
+  font-size: 20px;
+  list-style: none;
+}
+
+.fa-check {
+  color: #4ea3df;
+}
+
+.indicadorChatbotContainer {
+  display: flex;
+  justify-content: right;
+  margin-top: -120px;
+  margin-right: 530px;
+}
+
+.indicadorChatbot {
+  width: 5%;
+}
+
+/***************** NOTICIAS ****************/
+.titleContainer {
+  background-color: rgba(236, 44, 127, 0.2);
+  height: 300px;
+  text-align: center;
+  padding: 20px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+}
+
+.titleContainer img {
+  width: 20%;
+  position: absolute;
+  left: 0;
+}
+
+.titleContainer h1 {
+  font-size: 70px;
+  font-family: "Roboto-Black", sans-serif;
+  color: #4ea3df;
+  margin-bottom: 0;
+}
+
+.titleContainer p {
+  font-size: 20px;
+  padding-inline: 450px;
+}
+
+.postsContainer {
+  display: flex;
+  padding: 20px;
+}
+
+.post {
+  margin: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 30px;
+}
+
+.post img {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.postDate {
+  font-weight: bold;
+  color: #4ea3df;
+}
+
+.post p,
+.post h3 {
+  padding-inline: 20px;
+}
+
+.post h3 {
+  font-family: "Roboto-Black", sans-serif;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.post button {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ec2c7f;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  border-bottom-right-radius: 20px;
+}
+
+/********* POSTS *************/
+.postTitle {
+  text-align: center;
+  font-family: "Roboto-Black", sans-serif;
+  font-size: 50px;
+}
+
+.postImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.postImage {
+  width: 50%;
+}
+
+.postContent {
+  padding-inline: 250px;
+  text-align: justify;
+}
+
+.post button {
+  cursor: pointer;
+}
+
+/***************** LOGIN PAGE ****************/
+.loginContainer {
+  display: flex;
+}
+
+.loginBanner {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm {
+  width: 50%;
+  height: 600px;
+  background-color: #ec2c7f;
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  border-radius: 50px;
+}
+
+.loginForm form {
+  width: 100%;
+  padding: 50px;
+}
+
+.loginForm form input {
+  display: block;
+  height: 30px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 95%;
+  border: 0;
+  border-radius: 20px;
+}
+
+.loginForm form button {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: #4ea3df;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+}
+
+.loginForm form button:hover {
+  background-color: #448cc0;
+  cursor: pointer;
+}
+
+.loginForm form h3 {
+  font-family: "Roboto-Black", sans-serif;
+  color: white;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.loginForm form p {
+  display: block;
+  color: white;
+  font-weight: bold;
+}
+
+.loginForm form a {
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.loginForm form a:hover {
+  color: black;
+}
+
+/***************** REGISTER PAGE ****************/
+.registerContainer {
+  display: flex;
+}
+
+.registerBanner {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerForm {
+  width: 50%;
+  background-color: #4ea3df;
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  border-radius: 50px;
+}
+
+.registerForm form {
+  width: 100%;
+  padding: 50px;
+}
+
+.registerForm form input {
+  display: block;
+  height: 30px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 95%;
+  border: 0;
+  border-radius: 20px;
+}
+
+.registerForm form button {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: #ec2c7f;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.registerForm form button:hover {
+  background-color: #bf2568;
+  cursor: pointer;
+}
+
+.registerForm form h3 {
+  font-family: "Roboto-Black", sans-serif;
+  color: white;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.registerForm form p {
+  display: block;
+  color: white;
+  font-weight: bold;
+}
+
+.registerForm form a {
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.registerForm form a:hover {
+  color: black;
+}
+
+/** MODAL ***/
+.ReactModal__Content {
+  max-width: 60%;
+  height: 600px;
+  margin: auto;
+  margin-top: 50px;
+  top: 50%; /* Centra verticalmente el modal */
+  transform: translateY(15%);
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modalCard {
+  background-color: #4ea3df;
+  border: 0;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalCard .close {
+  position: absolute;
+  width: 30px;
+  top: 0;
+  right: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modalCard .close:hover {
+  color: #ec2c7f;
+}
+
+/** INFORMACION DEL PRECIO **/
+.priceContainer {
+  width: 50%;
+  max-width: 50%;
+  height: 400px;
+  background-color: #ec2c7f;
+  color: white;
+}
+
+.priceContainer h3 {
+  padding-inline: 70px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.priceContainerComision, .priceContainerTotal {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 70px;
+  font-size: 20px;
+  align-items: center;
+}
+
+.priceContainerTotal p , .priceContainerTotal h4, .priceContainerComision p, .priceContainerComision h4 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.priceContainer hr {
+  width: 350px;
+  border: 0;
+  height: 1px;
+  background-color: white;
+}
+
+.ContainerIdCompra h3 {
+  margin: 0;
+}
+
+.priceContainerIdCompra {
+  display: flex;
+  align-items: center;
+  padding-inline: 70px;
+}
+
+.priceContainerIdCompra i {
+  margin-right: 10px;
+}
+
+/** TARJETA FORM **/
+.payContainer {
+  width: 50%;
+  padding: 30px;
+}
+
+.payContainer h3 {
+  font-size: 25px;
+  font-family: "Roboto-Black", sans-serif;
+}
+
+.payContainer input {
+  display: block;
+  margin-bottom: 20px;
+  width: 80%;
+  height: 20px;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.payContainer button {
+  border: 0;
+  border-radius: 30px;
+  background-color: #ec2c7f;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.payContainer button:hover {
+  background-color: #bf2568;
+  cursor: pointer;
+}
+
+.payContainer .cardCvv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.payContainer .cardCvv div {
+  width: 45%;
+}
+
+.payContainer .cardCvv div input {
+  margin-inline: 0;
+  width: 80%;
+}
+
+/************** GRACIAS ******************/
+.sliderThanksContainer {
+  text-align: center;
+}
+
+.bannerThanksContainer {
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
