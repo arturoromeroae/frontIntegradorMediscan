@@ -723,3 +723,33 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+/************** ADMIN ******************/
+.adminContainer {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.adminContainer h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #bf2568;
+}
+
+.adminContainer img {
+  width: 20%;
+}
+
+.tableContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.dataUserTable {
+  border: 1px solid;
+}
+
+.dataUserTable th, .dataUserTable td {
+  border: 2px solid;
+  padding: 20px;
+}

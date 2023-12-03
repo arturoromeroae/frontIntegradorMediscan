@@ -17,6 +17,11 @@ const Header = ({ username, handleLogoutClick }) => {
           <li>
             <NavLink to="/noticias">Noticias</NavLink>
           </li>
+          {username ? (
+          <li>
+            <NavLink to="/administrador">Consultas</NavLink>
+          </li>
+          ) : ""}
         </ul>
         {username ? (
           <>

@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Gracias from './pages/Gracias';
 import Header from './pages/components/Header';
+import Admin from './pages/Admin';
 
 // variable global del chatbot inicializado
 window.chatbotInitialized = false;
@@ -21,7 +22,7 @@ function AuthenticatedApp({ username }) {
 
   const handleLogoutClick = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/auth/logout", {
+      const response = await fetch("https://authproject-406922.wl.r.appspot.com/api/auth/logout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,6 +69,7 @@ function AuthenticatedApp({ username }) {
           <Route path="/iniciar-sesion" element={<Login />} />
           <Route path="/registrarse" element={<Register />} />
           <Route path="/registro-completado" element={<Gracias />} />
+          <Route path="/administrador" element={<Admin username={username} />} />
         </Routes>
       </div>
     </>
