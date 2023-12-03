@@ -35,7 +35,7 @@ const Admin = ({ username }) => {
             {/* CONTENEDOR DEL INICIO DE SESION */}
             <div className="adminContainer">
                 <img src={ban} alt="banner" />
-                <h2>Bienvenido, {username} estas son tus consultas!</h2>
+                <h2>Bienvenido, {username} esta es tu consulta!</h2>
 
                 {/* Tabla para mostrar la data */}
                 <div className="tableContainer">
