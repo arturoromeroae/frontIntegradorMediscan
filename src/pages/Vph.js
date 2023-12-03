@@ -6,8 +6,6 @@ import post3 from "../img/post3.jpeg";
 function Vph() {
   return (
     <section className="layout">
-      {/* CABECERA DEL SITIO */}
-      <Header />
       <div className="main">
         <h1 className="postTitle">
           Información para las mujeres jóvenes sobre la vacuna contra el VPH:

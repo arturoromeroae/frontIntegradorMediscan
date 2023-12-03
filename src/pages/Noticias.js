@@ -10,8 +10,6 @@ import post3 from "../img/post3.jpeg";
 function Noticias() {
   return (
     <section className="layout">
-      {/* CABECERA DEL SITIO */}
-      <Header />
       <div className="main">
         <div className="titleContainer">
           <img src={news} alt="banner noticias" />

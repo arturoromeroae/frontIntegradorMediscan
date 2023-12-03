@@ -6,8 +6,6 @@ import post2 from "../img/post2.jpeg";
 function Ets() {
   return (
     <section className="layout">
-      {/* CABECERA DEL SITIO */}
-      <Header />
       <div className="main">
         <h1 className="postTitle">
           ¿Qué son las enfermedades de transmisión sexual (ETS)?

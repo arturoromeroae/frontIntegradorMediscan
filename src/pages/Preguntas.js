@@ -9,9 +9,6 @@ import arrow from "../img/animations/arrow.json";
 function Preguntas() {
   return (
     <section className="layout">
-      {/* CABECERA DEL SITIO */}
-      <Header />
-
       {/* CONTENEDOR DEL CHATBOT */}
       <div className="questionsMainContainer">
         <img src={chatbotBanner} alt="banner de chatbot" />

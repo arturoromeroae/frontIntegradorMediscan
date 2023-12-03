@@ -14,8 +14,6 @@ import Footer from "./components/Footer";
 function Home() {
   return (
     <section className="layout">
-      {/* CABECERA DEL SITIO */}
-      <Header />
       <div className="HomeContainer">
         {/* SLIDER DEL HOME */}
         <div className="sliderHomerContainer">

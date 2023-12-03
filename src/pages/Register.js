@@ -105,8 +105,6 @@ function Register() {
 
   return (
     <section className="layout">
-      {/* CABECERA DEL SITIO */}
-      <Header />
 
       {/* CONTENEDOR DEL INICIO DE SESION */}
       <div className="registerContainer">

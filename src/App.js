@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Preguntas from './pages/Preguntas';
@@ -11,26 +11,114 @@ import Vph from './pages/Vph';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Gracias from './pages/Gracias';
+import Header from './pages/components/Header';
 
 // variable global del chatbot inicializado
 window.chatbotInitialized = false;
 
-function App() {
-    return (
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} index />
-            <Route path="/preguntas" element={<Preguntas />} />
-            <Route path="/noticias" element={<Noticias />} />
-            <Route path="/infecciones" element={<Infecciones />} />
-            <Route path="/que-son-ets" element={<Ets />} />
-            <Route path="/vph" element={<Vph />} />
-            <Route path="/iniciar-sesion" element={<Login />} />
-            <Route path="/registrarse" element={<Register />} />
-            <Route path="/registro-completado" element={<Gracias />} />
-          </Routes>
-        </Router>
-      );
+function AuthenticatedApp({ username }) {
+  const [logoutMessage, setLogoutMessage] = useState("");
+
+  const handleLogoutClick = async () => {
+    try {
+      const response = await fetch("http://localhost:8080/api/auth/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+
+      if (response.ok) {
+        setLogoutMessage("Sesión cerrada exitosamente");
+        setTimeout(() => {
+          setLogoutMessage('');
+          window.location.href = "/";
+        }, 2000);
+      } else {
+        console.error("Error al cerrar sesión");
+        setLogoutMessage("Error al cerrar sesión");
+      }
+    } catch (error) {
+      console.error("Error al cerrar sesión:", error);
+      setLogoutMessage("Error al cerrar sesión");
+    }
+  };
+
+  return (
+    <>
+      {username && (
+        <Header username={username} handleLogoutClick={handleLogoutClick} />
+      )}
+
+      <div className="container mt-4">
+        {logoutMessage && (
+          <div className="alert alert-info" role="alert">
+            {logoutMessage}
+          </div>
+        )}
+
+        <Routes>
+          <Route path="/" element={<Home />} index />
+          <Route path="/preguntas" element={<Preguntas />} />
+          <Route path="/noticias" element={<Noticias />} />
+          <Route path="/infecciones" element={<Infecciones />} />
+          <Route path="/que-son-ets" element={<Ets />} />
+          <Route path="/vph" element={<Vph />} />
+          <Route path="/iniciar-sesion" element={<Login />} />
+          <Route path="/registrarse" element={<Register />} />
+          <Route path="/registro-completado" element={<Gracias />} />
+        </Routes>
+      </div>
+    </>
+  );
 }
 
+function UnauthenticatedApp({ onLogin }) {
+  return (
+    <div className="container mt-4">
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home />} index />
+        <Route path="/preguntas" element={<Preguntas />} />
+        <Route path="/noticias" element={<Noticias />} />
+        <Route path="/infecciones" element={<Infecciones />} />
+        <Route path="/que-son-ets" element={<Ets />} />
+        <Route path="/vph" element={<Vph />} />
+        <Route path="/iniciar-sesion" element={<Login onLogin={onLogin} />} />
+        <Route path="/registrarse" element={<Register />} />
+        <Route path="/registro-completado" element={<Gracias />} />
+      </Routes>
+    </div>
+  );
+}
+
+function App() {
+  const [username, setUsername] = useState("");
+
+  const handleLogin = (user) => {
+    setUsername(user.usernameOrEmail);
+  };
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/iniciar-sesion"
+          element={<Login onLogin={handleLogin} />}
+        />
+        <Route
+          path="/*"
+          element={
+            username ? (
+              <AuthenticatedApp username={username} />
+            ) : (
+              <UnauthenticatedApp onLogin={handleLogin} />
+            )
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 export default App;

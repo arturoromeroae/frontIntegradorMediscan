@@ -6,8 +6,6 @@ import post1 from "../img/post1.jpeg";
 function Infecciones() {
   return (
     <section className="layout">
-      {/* CABECERA DEL SITIO */}
-      <Header />
       <div className="main">
         <h1 className="postTitle">Infecciones de transmisión sexual</h1>
         <div className="postImageContainer">
