@@ -79,7 +79,7 @@ function Register() {
 
     // Realiza la petición a tu API
     try {
-      const response = await fetch('https://proyecto-web-331805.wl.r.appspot.com/api/auth/signup', {
+      const response = await fetch('https://authproject-406922.wl.r.appspot.com/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
