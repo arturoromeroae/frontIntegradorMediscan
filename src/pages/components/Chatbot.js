@@ -5,9 +5,9 @@ function Chatbot() {
     if (!window.chatbotInitialized) {
       const loadWatsonAssistantScript = () => {
         window.watsonAssistantChatOptions = {
-          integrationID: "44167245-45cf-4136-9ee8-3b3ad8e0ff3e",
+          integrationID: "10f2ae1a-a431-43b1-927b-efebc6b2ccd8",
           region: "us-south",
-          serviceInstanceID: "135a4d67-81e0-4c12-932a-e56048ce62b6",
+          serviceInstanceID: "1d6ba26e-287d-4807-9604-dfbc879b5eed",
           onLoad: async (instance) => {
             await instance.render();
           }
