@@ -10,7 +10,7 @@ const Admin = ({ username }) => {
         const fetchData = async () => {
             try {
                 const response = await fetch(
-                    "https://proyecto-web-331805.wl.r.appspot.com/api/consulta/findByEmail/jruiz@email.com"
+                    `https://proyecto-web-331805.wl.r.appspot.com/api/consulta/findByEmail/${username}`
                 );
 
                 if (!response.ok) {
